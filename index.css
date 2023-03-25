@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: whitesmoke
+}
+
+/* HEADER */
+
+.header-container{
+    height: 8vh;
+    background-color: orange;
+    box-shadow: 1px 1px 3px #5f5f5f;
+}
+
+.header-content{
+    height: 100%;
+    max-width: 1280px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content{
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.header-logo, .footer-logo{
+    display: flex;
+    height: 100%;
+}
+
+.header-logo img, .footer-logo img{
+    width: 50px;
+}
+
+.header-logo p{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.header-logo p span{
+    height: 18px;
+}
+
+.header-btns{
+    display: flex;
+    height: 100%;
+    width: max-content;
+}
+
+.links-header:not(:last-child){
+    margin-right: 20px;
+}
+
+.links-header a{
+    height: 100%;
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+.links-header a:hover{
+    background-color: rgb(255, 195, 84);
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+}
+
+.header-src{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-input-src{
+    background-color: rgb(255, 241, 224);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.header-input-src input{
+    height: 60%;
+    margin: 0 10px;
+    text-decoration: none;
+    outline: none;
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 32px;
+    width: 280px;
+    margin: 0;
+    margin-right: -32px;
+    border-radius: 3px;
+    background-color: rgb(255, 241, 224);
+}
+
+.header-input-src img{
+    width: 35px;
+    pointer-events: none;
+}
+
+/* MAIN */
+
+.main-container{
+    min-height: 84vh;
+    background-color: whitesmoke;
+}
+
+.main-content{
+    max-width: 1280px;
+    margin: 10px  auto;
+}
+
+.titulo-receitas-vistas{
+    width: 100%;
+    font-size: 150%;
+    font-weight: bolder;
+    border-bottom: 4px solid #1f1f1f;
+    margin-top: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.titulo-receitas-vistas:hover{
+    border-color: orange;
+    transition: all .3s ease-in-out;
+}
+
+.receitas-vistas{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-receitas-vistas{
+    width: 380px;
+    height: 380px;
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    background-color: rgb(250, 230, 221);
+}
+
+.lista-receitas-vistas:hover{
+    background-color: rgb(252, 218, 201);
+    transition: all .5s ease-in-out;
+    padding: 15px;
+}
+
+.titulo-receita{
+    font-weight: bold;
+    font-size: 150%;
+    color: black;
+}
+
+.lista-receitas-vistas:hover .titulo-receita{
+    color: orange;
+    transition: all .3s ease-in-out;
+}
+
+.img-receita{
+    height: 230px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.img-receita img{
+    width: 350px;
+    border-radius: 5px;
+}
+
+.desc-receita{
+    font-weight: bold;
+    height: 75px;
+    width: 350px;
+}
+
+/* FOOTER */
+
+.footer-container{
+    height: 10vh;
+    background-color: wheat;
+}
+
+.footer-content{
+    width: 1280px;
+    display: flex;
+    margin: auto;
+    height: 10vh;
+    overflow: hidden;
+}
+
+.footer-logo{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.footer-logo p{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.footer-logo p span{
+    height: 19px;
+}
+
+.footer-links{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.footer-redes{
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-redes img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.footer-redes img:hover{
+    border-top: 4px solid orange;
+    transition: all .1s ease-in-out;
+}
+
+.footer-direitos{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.footer-direitos span{
+    color: orangered;
+}
