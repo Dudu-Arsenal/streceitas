@@ -169,6 +169,7 @@ body{
 }
 
 .titulo-receita{
+    text-align: center;
     font-weight: bold;
     font-size: 150%;
     color: black;
@@ -194,6 +195,7 @@ body{
 }
 
 .desc-receita{
+    text-align: left;
     font-weight: bold;
     height: 75px;
     width: 350px;
