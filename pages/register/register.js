@@ -1,0 +1,112 @@
+
+let nome = document.querySelector('#nome');
+let labelNome = document.querySelector('#labelNome');
+
+let username = document.querySelector('#username');
+let labelUsername = document.querySelector('#labelUsername');
+
+let senha = document.querySelector('#senha');
+let labelSenha = document.querySelector('#labelSenha');
+
+let confirmSenha = document.querySelector('#confirmSenha');
+let labelConfirmSenha = document.querySelector('#labelConfirmSenha');
+
+let validaNome = false;
+let validaUsername = false;
+let validaSenha = false;
+let validaConfirmSenha = false;    
+
+nome.addEventListener('blur', () => {
+    
+    if(nome.value.length > 0 && nome.value.length <= 2){
+        labelNome.setAttribute('style', 'color: red')
+        nome.setAttribute('style', 'border-color: red')
+        labelNome.innerHTML = 'Nome *Insira no mínimo 3 caracteres*'
+    } else if (!nome.value){
+        labelNome.setAttribute('style', 'color: #1f1f1f')
+        nome.setAttribute('style', 'border-color: ')
+        labelNome.innerHTML = 'Nome'
+    } else {
+        labelNome.setAttribute('style', 'color: green')
+        nome.setAttribute('style', 'border-color: green')
+        labelNome.innerHTML = 'Nome'
+        validaNome = true;
+    }
+})
+username.addEventListener('blur', () => {
+    if(username.value.length > 0 && username.value.length <= 4){
+        labelUsername.setAttribute('style', 'color: red')
+        username.setAttribute('style', 'border-color: red')
+        labelUsername.innerHTML = 'Usuario *Insira no mínimo 5 caracteres*'
+    } else if (!username.value){
+        labelUsername.setAttribute('style', 'color: #1f1f1f')
+        username.setAttribute('style', 'border-color: ')
+        labelUsername.innerHTML = 'Usuario'
+    } else{
+        labelUsername.setAttribute('style', 'color: green')
+        username.setAttribute('style', 'border-color: green')
+        labelUsername.innerHTML = 'Usuario'
+        validaUsername = true;
+    }
+})
+senha.addEventListener('blur', () => {
+    if(senha.value.length > 0 && senha.value.length <= 5){
+        labelSenha.setAttribute('style', 'color: red')
+        senha.setAttribute('style', 'border-color: red')
+        labelSenha.innerHTML = 'Senha *Insira no mínimo 6 caracteres*'
+    } else if (!senha.value){
+        labelSenha.setAttribute('style', 'color: #1f1f1f')
+        senha.setAttribute('style', 'border-color: ')
+        labelSenha.innerHTML = 'Senha'
+    } else{
+        labelSenha.setAttribute('style', 'color: green')
+        senha.setAttribute('style', 'border-color: green')
+        labelSenha.innerHTML = 'Senha'
+        validaSenha = true;
+    }
+})
+confirmSenha.addEventListener('keyup', () => {
+    if (senha.value != confirmSenha.value){
+        labelConfirmSenha.setAttribute('style', 'color: red')
+        confirmSenha.setAttribute('style', 'border-color: red')
+        labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não coincidem*'
+    } else if (!confirmSenha.value){
+        labelConfirmSenha.setAttribute('style', 'color: #1f1f1f')
+        confirmSenha.setAttribute('style', 'border-color: ')
+        labelConfirmSenha.innerHTML = 'Confirmar Senha'
+    }else {
+        labelConfirmSenha.setAttribute('style', 'color: green')
+        confirmSenha.setAttribute('style', 'border-color: green')
+        labelConfirmSenha.innerHTML = 'Confirmar Senha'
+        validaConfirmSenha = true;
+    }
+})
+
+function Cadastrar(){
+    if (validaNome || validaUsername || validaSenha || validaConfirmSenha){
+        alert('tudo ok')
+    } else {
+         alert("falta coisa")
+    }
+}
+
+
+function verSenha(){
+    let inputSenha = document.querySelector('#senha')
+    if(inputSenha.getAttribute('type') == 'password'){
+      inputSenha.setAttribute('type', 'text')
+    } else {
+      inputSenha.setAttribute('type', 'password')
+    }
+}
+
+function verConfirmSenha(){
+
+    let inputConfirmSenha = document.querySelector('#confirmSenha')
+    if(inputConfirmSenha.getAttribute('type') == 'password'){
+      inputConfirmSenha.setAttribute('type', 'text')
+    } else {
+      inputConfirmSenha.setAttribute('type', 'password')
+    }
+
+}

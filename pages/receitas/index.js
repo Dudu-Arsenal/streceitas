@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
   let titulos = ['Bolo de Fub\u00e1', 'Brigadeiro', 'Torta de Lim\u00e3o', 'Misto Quente', 'Bolo de Aipim', 'Bolo de Cenoura com Chocolate', 'Mousse de Maracuj\u00e1'];
@@ -25,7 +24,7 @@ $(document).ready(function(){
     let descricao = document.createElement('p')
 
     titulo.innerHTML = titulos[x];
-    image.src = './assets/img-receitas/maisvista'+ (x + 1) + '.jpg';
+    image.src = '../../assets/img-receitas/maisvista'+ (x + 1) + '.jpg';
     descricao = descricoes[x];
 
     divTitulo.append(titulo);
@@ -49,4 +48,10 @@ $(document).ready(function(){
       ultimaLinha.append(divLista);
     }
   }
+});
+
+$(function(){
+  $('#seta_up').click(function(e){
+    $('html, body').animate({scrollTop: 0}, 1000);
+  });
 });

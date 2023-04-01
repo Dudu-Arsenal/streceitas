@@ -1,0 +1,116 @@
+.main-content{
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-corpo{
+    height: 350px;
+    width: 350px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.login-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.login-title{
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-size: 170%;
+}
+
+.login-inputs{
+    margin-bottom: 18px;
+}
+
+/* .login-input{
+    display: flex;
+    margin: 5px;
+}
+
+.login-input label{
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.login-input input{
+    border: 2px solid #1f1f1f;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+} */
+
+
+.login-input{
+    position: relative;
+    width: max-content;
+    margin: 5% auto;
+    padding-top: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.login-input input{
+    width: 100%;
+    padding: 5px 5px 0 1px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #1f1f1f;
+    background-color: transparent;
+    outline: none;
+    width: 260px;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.login-input input:focus{
+    border-bottom: 2px solid #bf5600;
+}
+
+.login-input label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 16px;
+    transition: all .3s ease-out;
+    font-size: 135%;
+    text-align: center;
+    width: max-content;
+}
+
+.login-input input:focus + label,
+.login-input input:valid + label{
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 0;
+     
+}
+
+.login-btn{
+    font-size: 140%;
+    font-weight: bolder;
+    width: 200px;
+    height: 40px;
+    background-color: orange;
+    border-radius: 5px;
+    border: 2px solid black;
+    line-height: 0;
+    margin: 10px auto;
+    display: block;
+}
