@@ -16,6 +16,7 @@
 .login-content{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: 100%;
     width: 100%;
@@ -109,9 +110,18 @@ input::-webkit-inner-spin-button {
     display: block;
 }
 
+@keyframes treme {
+    0% {margin-left: 0;}
+    25% {margin-left: 5px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -5px;}
+    100% {margin-left: 0;}
+  }
+
 #msgError{
+    animation: treme 0.2s;
+    animation-iteration-count: 3;
     width: 350px;
-    margin: 0 auto;
     text-align: center;
     font-weight: bold;
     line-height: 2;
@@ -120,12 +130,14 @@ input::-webkit-inner-spin-button {
     background-color: #ffb3b3;
     border-radius: 5px;
     display: none;
+    transition: all .3s ease-in-out;
 }
 
 #msgSucess{
+    animation: treme 0.2s;
+    animation-iteration-count: 3;
     width: max-content;
     padding: 0 10px;
-    margin: 0 auto;
     text-align: center;
     font-weight: bold;
     line-height: 2;
@@ -134,4 +146,5 @@ input::-webkit-inner-spin-button {
     background-color: #c0ffb3;
     border-radius: 5px;
     display: none;
+    transition: all .3s ease-in-out;
 }
