@@ -1,21 +1,31 @@
 function Logar(){
+
+    
     let username = document.querySelector('#username')
     let userLabel = document.querySelector('#userLabel')
-
+    
     let senha = document.querySelector('#senha')
     let senhaLabel = document.querySelector('#senhaLabel')
-
+    
     let msgError = document.querySelector('#msgError')
-
+    
     let listaUser = []
-
+    
     let userValid = {
         nome: '',
         user: '',
         senha: ''
     }
-
+    
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
+    
+    if (localStorage.getItem('listaUser') == null){
+        msgError.innerHTML = 'Fa\u00e7a seu Primeiro registro.'
+        msgError.setAttribute('style', 'display: block')
+        setTimeout(() =>{
+            window.location.href = '../register/register.html'
+        }, 3000)
+    }
 
     listaUser.forEach((item) => {
         if (username.value == item.userCad && senha.value == item.senhaCad){
@@ -54,7 +64,7 @@ function Logar(){
         }, 500)
     } else {
         msgError.setAttribute('style', 'display: none')
-        msgError.innerHTML = 'Usuário ou senha incorretos.'
+        msgError.innerHTML = 'Usu\u00e1rio ou senha incorretos.'
         setTimeout(() =>{
             msgError.setAttribute('style', 'display: block')
         }, 1)

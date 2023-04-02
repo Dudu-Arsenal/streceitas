@@ -25,7 +25,7 @@ nome.addEventListener('keyup', () => {
     if (nome.value.length > 0 && nome.value.length <= 2) {
         labelNome.setAttribute('style', 'color: red')
         nome.setAttribute('style', 'border-color: red')
-        labelNome.innerHTML = 'Nome *Insira no mínimo 3 caracteres*'
+        labelNome.innerHTML = 'Nome *Insira no m\u00ednimo 3 caracteres*'
         validaNome = false;
     } else if (!nome.value) {
         labelNome.setAttribute('style', 'color: #1f1f1f')
@@ -43,7 +43,7 @@ username.addEventListener('keyup', () => {
     if (username.value.length > 0 && username.value.length <= 4) {
         labelUsername.setAttribute('style', 'color: red')
         username.setAttribute('style', 'border-color: red')
-        labelUsername.innerHTML = 'Usuario *Insira no mínimo 5 caracteres*'
+        labelUsername.innerHTML = 'Usuario *Insira no m\u00ednimo 5 caracteres*'
         validaUsername = false;
     } else if (!username.value) {
         labelUsername.setAttribute('style', 'color: #1f1f1f')
@@ -61,7 +61,7 @@ senha.addEventListener('keyup', () => {
     if (senha.value.length > 0 && senha.value.length <= 5) {
         labelSenha.setAttribute('style', 'color: red')
         senha.setAttribute('style', 'border-color: red')
-        labelSenha.innerHTML = 'Senha *Insira no mínimo 6 caracteres*'
+        labelSenha.innerHTML = 'Senha *Insira no m\u00ednimo 6 caracteres*'
         validaSenha = false;
     } else if (!senha.value) {
         labelSenha.setAttribute('style', 'color: #1f1f1f')
@@ -84,7 +84,7 @@ confirmSenha.addEventListener('keyup', () => {
     if (senha.value != confirmSenha.value) {
         labelConfirmSenha.setAttribute('style', 'color: red')
         confirmSenha.setAttribute('style', 'border-color: red')
-        labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não coincidem*'
+        labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas n\u00e3o coincidem*'
         validaConfirmSenha = false;
     } else if (!confirmSenha.value) {
         labelConfirmSenha.setAttribute('style', 'color: #1f1f1f')
@@ -138,7 +138,7 @@ function Cadastrar() {
             if (username.value == item.userCad) {
                 msgSucess.setAttribute('style', 'display: none');
                 msgError.setAttribute('style', 'display: none');
-                msgError.innerHTML = 'Usuário já existe.'
+                msgError.innerHTML = 'Usu\u00e1rio j\u00e1 existe.'
                 setTimeout(() => {
                     msgError.setAttribute('style', 'display: block');
                 }, 1)
@@ -152,10 +152,10 @@ function Cadastrar() {
                     userCad: username.value,
                     senhaCad: senha.value
                 })
-/*                 localStorage.setItem('listaUser', JSON.stringify(listaUser))
+                localStorage.setItem('listaUser', JSON.stringify(listaUser))
                 setTimeout(() => {
                     window.location.href = '../login/login.html'
-                }, 3000) */
+                }, 3000) 
                 msgError.setAttribute('style', 'display: none');
                 msgSucess.setAttribute('style', 'display: block');
         }

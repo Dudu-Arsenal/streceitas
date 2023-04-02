@@ -11,5 +11,5 @@ if (localStorage.getItem('token') != null){
 function Logout(){
     localStorage.removeItem('token')
     localStorage.removeItem('userLogado')
-    window.location.href = '../login/login.html'
+    window.location.href = './pages/login/login.html'
 }
