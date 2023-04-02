@@ -71,7 +71,7 @@ senha.addEventListener('keyup', () => {
     } else if (senha.value != confirmSenha.value || confirmSenha.value != senha.value) {
         labelSenha.setAttribute('style', 'color: red')
         senha.setAttribute('style', 'border-color: red')
-        labelSenha.innerHTML = 'Senha *As senhas não coincidem*'
+        labelSenha.innerHTML = 'Senha *As senhas n\u00e3o coincidem*'
         validaSenha = false;
     } else {
         labelSenha.setAttribute('style', 'color: green')
