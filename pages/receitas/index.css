@@ -83,9 +83,13 @@ body{
 }
 
 .header-src{
-    height: 100%;
     display: flex;
+    flex-direction: column;
+    position: sticky;
     align-items: center;
+    margin: auto 0;
+    height: 35px;
+    overflow: visible;
 }
 
 .header-input-src{
@@ -103,7 +107,7 @@ body{
     font-size: 100%;
     padding-left: 5px;
     padding-right: 32px;
-    width: 280px;
+    width: 380px;
     margin: 0;
     margin-right: -32px;
     border-radius: 3px;
@@ -113,6 +117,38 @@ body{
 .header-input-src img{
     width: 35px;
     pointer-events: none;
+}
+
+.itens-receitas{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(255, 243, 231);
+    width: 385px;
+    max-height: 300px;
+    min-height: 40px;
+    border-radius: 5px;
+    margin-top: 35px;
+    border: 2px solid rgba(255, 68, 0, 0.432);
+    padding: 8px 5px;
+    overflow: scroll;
+}
+
+.itens-receitas div{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.itens-receitas div:hover{
+    background-color: rgb(255, 222, 209);
+}
+
+.itens-receitas::-webkit-scrollbar{
+    display: none;
 }
 
 .logoutDiv{

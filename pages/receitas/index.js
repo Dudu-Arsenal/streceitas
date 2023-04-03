@@ -1,15 +1,12 @@
 let userLogado = JSON.parse(localStorage.getItem('userLogado'))
-
 let logado = document.querySelector('#logado')
 
-if (localStorage.getItem('token') == null){
+/* if (localStorage.getItem('token') == null){
     alert('Voc\u00ea precisa estar logado para acessar esta p\u00e1gina')
     window.location.href = '../login/login.html'
-}
+} */
 
-$(document).ready(function(){
-
-  let titulos = ['Bolo de Fub\u00e1', 'Brigadeiro', 'Torta de Lim\u00e3o', 'Misto Quente', 'Bolo de Aipim', 'Bolo de Cenoura com Chocolate', 'Mousse de Maracuj\u00e1'];
+  let titulos = ['Bolo de Fub\u00e1', 'Brigadeiro', 'Torta de Lim\u00e3o', 'Misto Quente', 'Bolo de Aipim', 'Bolo de Cenoura com Chocolate', 'Mousse de Maracuj\u00e1', 'Mousse de Limão', 'Mousse de Morango', 'Doce de Abacate', 'Doce de Banana', 'Ovo de Pâscoa', 'Torta de Frango'];
   let descricoes = [
     'Essa \u00e9 a mais famosa do Brasil e tamb\u00e9m uma das mais simples, facil de se fazer e facil de comer',
     'O brigadeiro \u00e9 um doce genuinamente brasileiro. Um orgulho s\u00f3!',
@@ -22,7 +19,7 @@ $(document).ready(function(){
 
   let divMain = document.querySelector('.receitas-vistas-container');
 
-  for (x = 0; x < titulos.length; x++) {
+  for (x = 0; x < 7; x++) {
     let divLista = document.createElement('div');
     divLista.classList.add('lista-receitas-vistas');
     let divTitulo = document.createElement('div');
@@ -57,7 +54,6 @@ $(document).ready(function(){
       ultimaLinha.append(divLista);
     }
   }
-});
 
 $(function(){
   $('#seta_up').click(function(e){
@@ -70,4 +66,35 @@ function Logout(){
   localStorage.removeItem('token')
   localStorage.removeItem('userLogado')
   window.location.href = '../login/login.html'
+}
+
+let pesquisa = document.querySelector('#pesquisa')
+let listaItens = document.querySelector('.itens-receitas')
+
+pesquisa.oninput = () => {
+  listaItens.innerHTML = "";
+
+  titulos.filter((item) => 
+  item.toLowerCase().includes(pesquisa.value.toLowerCase())
+  ).forEach((item) => addHTML(item));
+}
+
+function addHTML(item){
+  const div = document.createElement('div');
+  div.innerHTML = item;
+  listaItens.append(div)
+  div.setAttribute('id', 'idItems')
+  div.setAttribute('onclick', 'Teste(idItems.value)')
+}
+
+function HidePesquisa(){
+  listaItens.setAttribute('style', 'display: none')
+}
+
+function ShowPesquisa(){
+  listaItens.setAttribute('style', 'display: block')
+}
+
+function Teste(x){
+  console.log(x)
 }

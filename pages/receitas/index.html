@@ -27,8 +27,10 @@
       </div>
       <div class="header-src">
         <div class="header-input-src">
-          <input type="text">
-          <img src="../../assets/icons/pesquisar.png" alt="Pesquisar">
+          <input type="search" id="pesquisa" onblur="HidePesquisa()" onfocus="ShowPesquisa()">
+          <img src="../../assets/icons/pesquisar.png" alt="Pesquisar" id="">
+        </div>
+        <div class="itens-receitas">
         </div>
       </div>
       <div class="logoutDiv"onclick="Logout()">
