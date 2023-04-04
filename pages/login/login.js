@@ -1,24 +1,28 @@
 function Logar(){
-
-    
+    /* Criando o DOM para receber os valores de input de usuario e Senha */
     let username = document.querySelector('#username')
     let userLabel = document.querySelector('#userLabel')
     
     let senha = document.querySelector('#senha')
     let senhaLabel = document.querySelector('#senhaLabel')
     
+    /* DOM para a mensagem de erro */
     let msgError = document.querySelector('#msgError')
     
+    /* Array que armazena os dados vindo do "Banco de Dados" */
     let listaUser = []
-    
+
+    /* Array que armazena os dados do usuario caso os inputs sejam corretos*/
     let userValid = {
         nome: '',
         user: '',
         senha: ''
     }
     
+    /* Pegando o Array do "Banco" e armazenando no nosso array */
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
     
+    /* Se o usuario não existir no banco */
     if (localStorage.getItem('listaUser') == null){
         msgError.innerHTML = 'Fa\u00e7a seu Primeiro registro.'
         msgError.setAttribute('style', 'display: block')
@@ -27,6 +31,7 @@ function Logar(){
         }, 3000)
     }
 
+    /* Varrendo o array para comparar o input com algum usuario do banco */
     listaUser.forEach((item) => {
         if (username.value == item.userCad && senha.value == item.senhaCad){
             userValid = {
@@ -36,6 +41,7 @@ function Logar(){
             }
         }
     });
+    /* Comparando se o usuario e senha estão corretos */
     if (!username.value || !senha.value){
         msgError.setAttribute('style', 'display: none')
         setTimeout(() =>{
@@ -76,3 +82,15 @@ function Logar(){
     }
 
 }
+
+/* Evento para chamar a função de Login caso seja usado o Enter */
+username.addEventListener('keypress', (function(e){
+    if(e.key === 'Enter'){
+        Logar();
+    }
+}))
+senha.addEventListener('keypress', (function(e){
+    if(e.key === 'Enter'){
+        Logar();
+    }
+}))

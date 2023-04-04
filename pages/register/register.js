@@ -169,3 +169,26 @@ function Cadastrar() {
         }, 1)
     }
 }
+
+$(document).ready(function(){
+    nome.addEventListener('keypress', (function(e){
+        if(e.key === 'Enter'){
+            Cadastrar();
+        }
+    }))
+    username.addEventListener('keypress', (function(e){
+        if(e.key === 'Enter'){
+            Cadastrar();
+        }
+    }))
+    senha.addEventListener('keypress', (function(e){
+        if(e.key === 'Enter'){
+            Cadastrar();
+        }
+    }))
+    confirmSenha.addEventListener('keypress', (function(e){
+        if(e.key === 'Enter'){
+            Cadastrar();
+        }
+    }))
+})
