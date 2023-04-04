@@ -44,9 +44,12 @@ body{
 }
 
 .header-logo p{
-    height: 10vh;
+    margin: auto;
+    height: 8vh;
+    justify-content: center;
     display: flex;
     flex-direction: column;
+    line-height: 1;
     margin-left: 10px;
 }
 
@@ -114,6 +117,19 @@ body{
     background-color: rgb(255, 241, 224);
 }
 
+.fa-times{
+    position: absolute;
+    right: 0;
+    margin-right: 35px;
+    display: none !important;
+    cursor: pointer;
+    text-align: center;
+    font-size: 125% !important;
+    width: 25px;
+    height: auto;
+    line-height: 3;
+}
+
 .header-input-src img{
     width: 35px;
     pointer-events: none;
@@ -135,12 +151,27 @@ body{
 }
 
 .itens-receitas div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.itens-receitas p{
     border-radius: 5px;
     display: flex;
     align-items: center;
     height: 70px;
-    cursor: pointer;
+    width: 100%;
+    text-align: left;
     padding: 2px;
+}
+
+.itens-receitas img{
+    width: 25%;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .itens-receitas div:hover{
@@ -148,7 +179,17 @@ body{
 }
 
 .itens-receitas::-webkit-scrollbar{
-    display: none;
+    width: 10px;
+    height: 100%;
+}
+
+.itens-receitas::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 186, 59);
+    border-radius: 3px;
+}
+
+.itens-receitas::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(255, 148, 77);
 }
 
 .logoutDiv{
@@ -310,7 +351,9 @@ body{
 .footer-logo p{
     height: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    line-height: 1;
     margin-left: 10px;
 }
 
@@ -334,6 +377,8 @@ body{
 
 .footer-redes a{
     height: 8vh;
+    display: flex;
+    align-items: center;
 }
 
 .footer-redes img{

@@ -28,9 +28,12 @@ for (x = 0; x < 7; x++) {
   let titulo = document.createElement('p')
   let image = document.createElement('img');
   let descricao = document.createElement('p')
+  /* Variavel que armazena o nome das receitas toda em LowerCase */
+  let noSpace = titulos[x].replace(/\s/g, '');
+  noSpace = noSpace.toLowerCase();
 
   titulo.innerHTML = titulos[x];
-  image.src = '../../assets/img-receitas/maisvista' + (x + 1) + '.jpg';
+  image.src = '../../assets/img-receitas/'+noSpace+'.jpg';
   descricao = descricoes[x];
 
   divTitulo.append(titulo);
@@ -43,9 +46,6 @@ for (x = 0; x < 7; x++) {
   divLista.append(divTitulo);
   divLista.append(divImage);
   divLista.append(divDescricao);
-
-  let noSpace = titulos[x].replace(/\s/g, '');
-  noSpace = noSpace.toLowerCase();
   divLista.setAttribute('id', noSpace);
   divLista.setAttribute('onclick', 'Teste(id)')
 
@@ -75,6 +75,17 @@ function Logout() {
 
 let pesquisa = document.querySelector('#pesquisa')
 let listaItens = document.querySelector('.itens-receitas')
+let closeIcon = document.querySelector('.fa-times')
+
+pesquisa.addEventListener('keyup', () =>{
+  if (pesquisa.value == ''){
+    listaItens.setAttribute('style', 'display: none')
+    closeIcon.setAttribute('style', 'display: none !important')
+  } else {
+    listaItens.setAttribute('style', 'display: block')
+    closeIcon.setAttribute('style', 'display: flex !important')
+  }
+})
 
 pesquisa.oninput = () => {
   listaItens.innerHTML = "";
@@ -86,11 +97,16 @@ pesquisa.oninput = () => {
 
 function addHTML(item) {
   const div = document.createElement('div');
-  div.innerHTML = item;
-  listaItens.append(div)
-  div.setAttribute('id', 'idItems')
+  const p = document.createElement('p')
+  const img = document.createElement('img')
   let noSpace = item.replace(/\s/g, '');
   noSpace = noSpace.toLowerCase()
+  img.src = '../../assets/img-receitas/'+noSpace+'.jpg';
+  p.innerHTML = item;
+  listaItens.append(div);
+  div.append(img);
+  div.append(p);
+  div.setAttribute('id', 'idItems')
   div.setAttribute('class', noSpace)
   div.setAttribute('onclick', 'Teste(className)')
 }
@@ -100,7 +116,12 @@ function HidePesquisa() {
 }
 
 function ShowPesquisa() {
-  listaItens.setAttribute('style', 'display: block')
+}
+
+function LimpaPesquisa(){
+  pesquisa.value = ''
+  closeIcon.setAttribute('style', 'display: none !important')
+  listaItens.setAttribute('style', 'display: none')
 }
 
 function Teste(x) {
