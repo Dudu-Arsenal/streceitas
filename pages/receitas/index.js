@@ -1,12 +1,12 @@
 let userLogado = JSON.parse(localStorage.getItem('userLogado'))
 let logado = document.querySelector('#logado')
 
-/*  if (localStorage.getItem('token') == null){
+  if (localStorage.getItem('token') == null){
     alert('Voc\u00ea precisa estar logado para acessar esta p\u00e1gina')
     window.location.href = '../login/login.html'
-}  */
+}  
 
-let titulos = ['Bolo de Fub\u00e1', 'Brigadeiro', 'Torta de Lim\u00e3o', 'Misto Quente', 'Bolo de Aipim', 'Bolo de Cenoura com Chocolate', 'Mousse de Maracuj\u00e1', 'Mousse de Limão', 'Mousse de Morango', 'Doce de Abacate', 'Doce de Banana', 'Ovo de Pâscoa', 'Torta de Frango'];
+let titulos = ['Bolo de Fub\u00e1', 'Brigadeiro', 'Torta de Lim\u00e3o', 'Misto Quente', 'Bolo de Aipim', 'Bolo de Cenoura com Chocolate', 'Mousse de Maracuj\u00e1', 'Mousse de Lim\u00e3o', 'Mousse de Morango', 'Doce de Abacate', 'Doce de Banana', 'Ovo de P\u00e2scoa', 'Torta de Frango'];
 let descricoes = [
   'Essa \u00e9 a mais famosa do Brasil e tamb\u00e9m uma das mais simples, facil de se fazer e facil de comer',
   'O brigadeiro \u00e9 um doce genuinamente brasileiro. Um orgulho s\u00f3!',
