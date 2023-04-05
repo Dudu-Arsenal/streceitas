@@ -1,7 +1,7 @@
 let userLogado = JSON.parse(localStorage.getItem('userLogado'))
 let logado = document.querySelector('#logado')
 
-  if (localStorage.getItem('token') == null){
+   if (localStorage.getItem('token') == null){
     alert('Voc\u00ea precisa estar logado para acessar esta p\u00e1gina')
     window.location.href = '../login/login.html'
 }  
@@ -127,3 +127,47 @@ function LimpaPesquisa(){
 function Teste(x) {
   window.location.href = 'receita/'+x+'.html'
 }
+
+let count = 0;
+let slider = document.querySelector('#slider')
+
+function ClickEsquerdo(){
+  if (count == 0){
+    console.log('limite máximo')
+    console.log('contador = 0')
+  } else if (count == 1){
+    slider.setAttribute('style', 'margin-left: 0');
+    count = 0;
+    console.log('contador = 1')
+  } else if (count == 2){
+    slider.setAttribute('style', 'margin-left: -680px');
+    count = 1;
+    console.log('contador = 2')
+  }
+}
+
+function ClickDireito(){
+  if (count == 0){
+    slider.setAttribute('style', 'margin-left: -680px');
+    count = 1;
+  } else if (count == 1){
+    slider.setAttribute('style', 'margin-left: -1360px');
+    count = 2;
+  } else if (count == 2){
+    console.log('limite máximo')
+  }
+}
+
+let sliderCount = 0;
+setInterval(function (){
+      if (sliderCount == 0){
+        slider.setAttribute('style', 'margin-left: -680px');
+        sliderCount = 1;
+      } else if (sliderCount == 1){
+        slider.setAttribute('style', 'margin-left: -1360px')
+        sliderCount = 2;
+      } else if(sliderCount == 2){
+        slider.setAttribute('style', 'margin-left: 0px')
+        sliderCount = 0;
+      }
+}, 5000);

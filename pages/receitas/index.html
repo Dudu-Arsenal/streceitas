@@ -1,131 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Pagina de Receitas</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Pagina de Receitas</title>
-</head>
-
-<body>
-  <header class="header-container">
-    <div class="header-content">
-      <div class="header-logo">
-        <img src="../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
-        <p>
-          <span>Receitas F&aacute;ceis</span>
-          <span>Agora</span>
-        </p>
-      </div>
-      <div class="header-btns">
-        <div class="links-header">
-          <a href="../../home.html" rel="noopener noreferrer">In&iacute;cio</a>
+  <body>
+    <header class="header-container">
+      <div class="header-content">
+        <div class="header-logo">
+          <img src="../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
+          <p>
+            <span>Receitas F&aacute;ceis</span>
+            <span>Agora</span>
+          </p>
         </div>
-        <div class="links-header">
-          <a href="" rel="noopener noreferrer">Receitas</a>
-        </div>
-      </div>
-      <div class="header-src">
-        <div class="header-input-src">
-          <input type="text" id="pesquisa" onfocus="ShowPesquisa()">
-          <i class="fa fa-times" aria-hidden="true" onclick="LimpaPesquisa()"></i>
-          <img src="../../assets/icons/pesquisar.png" alt="Pesquisar">
-        </div>
-        <div class="itens-receitas">
-        </div>
-      </div>
-      <div class="logoutDiv"onclick="Logout()">
-        <p>Sair</p><i class="fa fa-sign-out" aria-hidden="true" id="logout"></i>
-    </div>
-    </div>
-  </header>
-  <main class="main-container">
-    <div class="main-content">
-      <!-- CONTAINER RECEITAS MAIS VISTAS -->
-      <div class="receitas-vistas-container">
-        <div class="titulo-receitas-vistas">
-          <p>RECEITAS MAIS VISTAS</p>
-        </div>
-      </div>
-      
-      <!-- CONTAINER RECEITAS NOVAS -->
-      <div class="receitas-novas-container">
-        <!-- RECEITAS NOVAS -->
-        <div class="titulo-receitas-vistas">
-          <p>NOVAS RECEITAS</p>
-        </div>
-        <div class="receitas-vistas">
-          <div class="lista-receitas-vistas">
-            <div class="titulo-receita">
-              <p>Mo&ccedil;a Gelada</p>
-            </div>
-            <div class="img-receita">
-              <img src="../../assets/img-receitas/novasreceitas3.jpg" alt="" />
-            </div>
-            <div class="desc-receita">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
+        <div class="header-btns">
+          <div class="links-header">
+            <a href="../../home.html" rel="noopener noreferrer"
+              >In&iacute;cio</a
+            >
           </div>
-          <div class="lista-receitas-vistas">
-            <div class="titulo-receita">
-              <p>Salada de Frutas</p>
-            </div>
-            <div class="img-receita">
-              <img src="../../assets/img-receitas/novasreceitas2.jpg" alt="" />
-            </div>
-            <div class="desc-receita">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-                rem ex doloribus soluta sint magnam.
-              </p>
-            </div>
-          </div>
-          <div class="lista-receitas-vistas">
-            <div class="titulo-receita">
-              <p>Pastel Empanado</p>
-            </div>
-            <div class="img-receita">
-              <img src="../../assets/img-receitas/novasreceitas1.jpg" alt="" />
-            </div>
-            <div class="desc-receita">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                quia!
-              </p>
-            </div>
+          <div class="links-header">
+            <a href="" rel="noopener noreferrer">Receitas</a>
           </div>
         </div>
-      </div>
-      <div id="seta_up"><img class="setaUp" src="../../assets/icons/seta-up.webp"></div>
-    </div>
-  </main>
-  <footer class="footer-container">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
-        <p>
-          <span>Receitas</span>
-          <span>F&aacute;ceis</span>
-          <span>Agora</span>
-        </p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-redes">
-          <a href="https://www.facebook.com" target="_blank"><img src="../../assets/logos/facebook.png" alt="Facebook" /></a>
+        <div class="header-src">
+          <div class="header-input-src">
+            <input type="text" id="pesquisa" onfocus="ShowPesquisa()" />
+            <i
+              class="fa fa-times"
+              aria-hidden="true"
+              onclick="LimpaPesquisa()"
+            ></i>
+            <img src="../../assets/icons/pesquisar.png" alt="Pesquisar" />
+          </div>
+          <div class="itens-receitas"></div>
         </div>
-        <div class="footer-redes">
-          <a href="https://www.instagram.com" target="_blank"><img src="../../assets/logos/instagram.png" alt="Instagram" /></a>
-        </div>
-        <div class="footer-redes">
-          <a href="https://www.youtube.com" target="_blank"><img src="../../assets/logos/youtube.png" alt="Youtube" /></a>
+        <div class="logoutDiv" onclick="Logout()">
+          <p>Sair</p>
+          <i class="fa fa-sign-out" aria-hidden="true" id="logout"></i>
         </div>
       </div>
-      <div class="footer-direitos">
-        <p>Todos os direitos reservados por <span>Dudu</span>.</p>
+    </header>
+    <main class="main-container">
+      <div class="main-content">
+        <div class="feedback-container">
+          <div class="feedback-text">
+            <h1>Feedback</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+              nostrum. Voluptate inventore recusandae nisi deleniti qui quisquam
+              autem aut voluptates facilis obcaecati? Blanditiis est aut eaque
+              modi doloremque doloribus nihil?
+            </p>
+          </div>
+          <div class="img-slider">
+            <div class="slider" id="slider">
+              <div class="img-slide">
+                <img src="../../assets/feedbacks/feedback-abacate.png" alt="" />
+              </div>
+              <div class="img-slide">
+                <img src="../../assets/feedbacks/feedback-torta.png" alt="" />
+              </div>
+              <div class="img-slide">
+                <img src="../../assets/feedbacks/feedback-salada.png" alt="" />
+              </div>
+            </div>
+            <i
+              class="fa fa-arrow-left arrow"
+              aria-hidden="true"
+              onclick="ClickEsquerdo()"
+            ></i>
+            <i
+              class="fa fa-arrow-right arrow"
+              aria-hidden="true"
+              onclick="ClickDireito()"
+            ></i>
+          </div>
+        </div>
+        <!-- CONTAINER RECEITAS MAIS VISTAS -->
+        <div class="receitas-vistas-container">
+          <div class="titulo-receitas-vistas">
+            <p>RECEITAS MAIS VISTAS</p>
+          </div>
+        </div>
+        <!-- CONTAINER RECEITAS NOVAS -->
+        <div class="receitas-novas-container">
+          <!-- RECEITAS NOVAS -->
+          <div class="titulo-receitas-vistas">
+            <p>NOVAS RECEITAS</p>
+          </div>
+          <div class="receitas-vistas">
+            <div class="lista-receitas-vistas">
+              <div class="titulo-receita">
+                <p>Mo&ccedil;a Gelada</p>
+              </div>
+              <div class="img-receita">
+                <img
+                  src="../../assets/img-receitas/novasreceitas3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="desc-receita">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="lista-receitas-vistas">
+              <div class="titulo-receita">
+                <p>Salada de Frutas</p>
+              </div>
+              <div class="img-receita">
+                <img
+                  src="../../assets/img-receitas/novasreceitas2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="desc-receita">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+                  rem ex doloribus soluta sint magnam.
+                </p>
+              </div>
+            </div>
+            <div class="lista-receitas-vistas">
+              <div class="titulo-receita">
+                <p>Pastel Empanado</p>
+              </div>
+              <div class="img-receita">
+                <img
+                  src="../../assets/img-receitas/novasreceitas1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="desc-receita">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                  quia!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="seta_up">
+          <img class="setaUp" src="../../assets/icons/seta-up.webp" />
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
+    </main>
+    <footer class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
+          <p>
+            <span>Receitas</span>
+            <span>F&aacute;ceis</span>
+            <span>Agora</span>
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-redes">
+            <a href="https://www.facebook.com" target="_blank"
+              ><img src="../../assets/logos/facebook.png" alt="Facebook"
+            /></a>
+          </div>
+          <div class="footer-redes">
+            <a href="https://www.instagram.com" target="_blank"
+              ><img src="../../assets/logos/instagram.png" alt="Instagram"
+            /></a>
+          </div>
+          <div class="footer-redes">
+            <a href="https://www.youtube.com" target="_blank"
+              ><img src="../../assets/logos/youtube.png" alt="Youtube"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-direitos">
+          <p>Todos os direitos reservados por <span>Dudu</span>.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </html>

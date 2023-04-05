@@ -93,6 +93,7 @@ body{
     margin: auto 0;
     height: 35px;
     overflow: visible;
+    z-index: 1;
 }
 
 .header-input-src{
@@ -230,6 +231,63 @@ body{
 .main-content{
     max-width: 1280px;
     margin: auto;
+}
+
+.feedback-container{
+    display: flex;
+    height: max-content;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.feedback-text{
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.img-slider{
+    height: max-content;
+    max-width: 680px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #1f1f1f18;
+}
+
+.slider{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+.img-slide img{
+    width: 680px;
+    height: max-content;
+    display: block;
+}
+
+.arrow{
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    font-size: 250% !important;
+    color: rgb(51, 43, 39);
+    cursor: pointer;
+}
+
+.arrow:hover{
+    color: orange;
+    transition: all .2s ease-in-out;
+}
+.fa-arrow-left{
+}
+.fa-arrow-right{
+    margin-left: 644px;
 }
 
 .titulo-receitas-vistas{
