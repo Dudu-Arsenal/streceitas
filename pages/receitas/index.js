@@ -30,8 +30,8 @@ for (x = 0; x < 7; x++) {
   let descricao = document.createElement('p')
   /* Variavel que armazena o nome das receitas toda em LowerCase */
   let noSpace = titulos[x].replace(/\s/g, '');
-  noSpace = noSpace.toLowerCase();
-
+  noSpace = noSpace.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  
   titulo.innerHTML = titulos[x];
   image.src = '../../assets/img-receitas/'+noSpace+'.jpg';
   descricao = descricoes[x];
@@ -100,7 +100,7 @@ function addHTML(item) {
   const p = document.createElement('p')
   const img = document.createElement('img')
   let noSpace = item.replace(/\s/g, '');
-  noSpace = noSpace.toLowerCase()
+  noSpace = noSpace.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   img.src = '../../assets/img-receitas/'+noSpace+'.jpg';
   p.innerHTML = item;
   listaItens.append(div);
@@ -158,16 +158,15 @@ function ClickDireito(){
   }
 }
 
-let sliderCount = 0;
 setInterval(function (){
-      if (sliderCount == 0){
+      if (count == 0){
         slider.setAttribute('style', 'margin-left: -680px');
-        sliderCount = 1;
-      } else if (sliderCount == 1){
+        count = 1;
+      } else if (count == 1){
         slider.setAttribute('style', 'margin-left: -1360px')
-        sliderCount = 2;
-      } else if(sliderCount == 2){
+        count = 2;
+      } else if(count == 2){
         slider.setAttribute('style', 'margin-left: 0px')
-        sliderCount = 0;
+        count = 0;
       }
 }, 5000);
