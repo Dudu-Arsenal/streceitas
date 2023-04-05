@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bolo de Fubá</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="receita.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-    Bolo de Fubá
+    <header class="header-container">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="../../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
+                <p>
+                    <span>Receitas F&aacute;ceis</span>
+                    <span>Agora</span>
+                </p>
+            </div>
+            <div class="header-btns">
+                <div class="links-header">
+                    <a href="" rel="noopener noreferrer">In&iacute;cio</a>
+                </div>
+                <div class="links-header">
+                    <a href="../../receitas/index.html" rel="noopener noreferrer">Receitas</a>
+                </div>
+                <div class="links-header">
+                    <a href="../../login/login.html" rel="noopener noreferrer" id="loginLink">Login</a>
+                </div>
+            </div>
+            <div class="logoutDiv" onclick="Logout()">
+                <p>Sair</p><i class="fa fa-sign-out" aria-hidden="true" id="logout"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="main-content">
+            <div class="img-desc">
+                <div class="img-receita">
+                    <img src="../../../assets/img-receitas/bolodefubá.jpg" alt="">
+                </div>
+                <div class="sobre-receita">
+                    <div class="titulo-e-desc">
+                        <h1 class="titulo-receita">
+                            Bolo de Fubá
+                        </h1>
+                        <p class="desc-receita">
+                            Essa é a mais famosa do Brasil e também uma das mais simples, facil de se fazer e facil de
+                            comer.
+                        </p>
+                    </div>
+                    <div class="infos-receita">
+                        <div class="tempo-preparo infos">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>Preparo</p>
+                            <p class="info-hidden">30 Min</p>
+                        </div>
+                        <div class="rendimento infos">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            <p>Rendimento</p>
+                            <p class="info-hidden">10 Porções</p>
+                        </div>
+                        <div class="comentarios infos">
+                            <i class="fa fa-commenting" aria-hidden="true"></i>
+                            <p>Comentarios</p>
+                            <p class="info-hidden">27</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../../../assets/logos/logo.png" alt="Logo Receitas LIGHT" />
+                <p>
+                    <span>Receitas</span>
+                    <span>F&aacute;ceis</span>
+                    <span>Agora</span>
+                </p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-redes">
+                    <a href="https://www.facebook.com" target="_blank"><img src="../../../assets/logos/facebook.png"
+                            alt="Facebook" /></a>
+                </div>
+                <div class="footer-redes">
+                    <a href="https://www.instagram.com" target="_blank"><img src="../../../assets/logos/instagram.png"
+                            alt="Instagram" /></a>
+                </div>
+                <div class="footer-redes">
+                    <a href="https://www.youtube.com" target="_blank"><img src="../../../assets/logos/youtube.png"
+                            alt="Youtube" /></a>
+                </div>
+            </div>
+            <div class="footer-direitos">
+                <p>Todos os direitos reservados por <span>Dudu</span>.</p>
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="receita.js"></script>
+
 </html>

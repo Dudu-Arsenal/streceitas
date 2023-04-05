@@ -1,155 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-}
-
-body{
-    min-height: 100vh;
-    background-color: whitesmoke
-}
-
-/* HEADER */
-
-.header-container{
-    height: 8vh;
-    background-color: orange;
-    box-shadow: 1px 1px 3px #5f5f5f;
-}
-
-.header-content{
-    height: 8vh;
-    max-width: 1280px;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-content{
-    font-weight: bolder;
-    font-size: 120%;
-}
-
-.header-logo, .footer-logo{
-    display: flex;
-    height: 8vh;
-}
-
-.header-logo img, .footer-logo img{
-    width: 50px;
-    height: 50px;
-    margin: auto;
-}
-
-.header-logo p{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    justify-content: center;
-    line-height: 1;
-}
-
-.header-logo p span{
-    height: 18px;
-}
-
-.header-btns{
-    display: flex;
-    height: 100%;
-    width: max-content;
-}
-
-.links-header:not(:last-child){
-    margin-right: 20px;
-}
-
-.links-header a{
-    height: 100%;
-    width: 100px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    transition: all .3s ease-in-out;
-}
-
-.links-header a:hover{
-    background-color: rgb(255, 195, 84);
-    border-radius: 2px;
-    transition: all .3s ease-in-out;
-}
-
-.header-src{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.header-input-src{
-    background-color: rgb(255, 241, 224);
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-}
-
-.header-input-src input{
-    height: 60%;
-    margin: 0 10px;
-    text-decoration: none;
-    outline: none;
-    font-size: 100%;
-    padding-left: 5px;
-    padding-right: 32px;
-    width: 280px;
-    margin: 0;
-    margin-right: -32px;
-    border-radius: 3px;
-    background-color: rgb(255, 241, 224);
-}
-
-.header-input-src img{
-    width: 35px;
-    pointer-events: none;
-}
-
-.logoutDiv{
-    width: 70px;
-    margin-left: 160px;
-    justify-content: right;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.logoutDiv p{
-    margin-top: -3px;
-}
-
-#logout{
-    cursor: pointer;
-    width: 30px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 130%;
-}
-
-.logoutDiv:hover{
-    background-color: rgba(192, 125, 0, 0.397);
-}
-
-/* MAIN */
-
 .main-container{
     min-height: 84vh;
     background-color: whitesmoke;
@@ -185,110 +33,29 @@ body{
     font-size: 150%;
 }
 
-#html{
-    color: orangered;
-}
-
-#css{
-    color: cornflowerblue;
-}
-
-#javascript{
-    color: rgb(255, 187, 0);
-}
-
-#temos{
-    font-style: italic;
-    font-weight: bold;
-}
-
-#paginas{
-    color: rgb(141, 180, 0);
-}
-
-#discord{
-    color: blue;
-}
-
 .main-content a{
     text-decoration: none;
     color: blue;
 }
 
-/* FOOTER */
-
-.footer-container{
-    height: 8vh;
-    background-color: wheat;
-}
-
-.footer-content{
-    width: 1280px;
-    display: flex;
-    margin: auto;
-    height: 8vh;
-    overflow: hidden;
-}
-
-.footer-logo{
-    padding: 2px;
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-}
-
-.footer-logo p{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    line-height: 1;
-    justify-content: center;
-}
-
-.footer-logo p span{
-    height: 19px;
-}
-
-.footer-links{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    margin: 0 15px;
-}
-
-.footer-redes{
-    height: 8vh;
-    margin: 0 5px;
-    display: flex;
-    align-items: center;
-}
-
-.footer-redes a{
-    height: 8vh;
-    display: flex;
-    align-items: center;
-}
-
-.footer-redes img{
-    width: 50px;
-    cursor: pointer;
-}
-
-.footer-redes img:hover{
-    border-top: 4px solid orange;
-    transition: all .1s ease-in-out;
-}
-
-.footer-direitos{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    font-weight: bold;
-    font-size: 120%;
-}
-
-.footer-direitos span{
+#html{
     color: orangered;
 }
+#css{
+    color: cornflowerblue;
+}
+#javascript{
+    color: rgb(255, 187, 0);
+}
+#temos{
+    font-style: italic;
+    font-weight: bold;
+}
+#paginas{
+    color: rgb(141, 180, 0);
+}
+#discord{
+    color: blue;
+}
+
+
