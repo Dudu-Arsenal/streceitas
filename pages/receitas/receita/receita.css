@@ -7,20 +7,24 @@
 }
 
 .main-content{
-    width: 1280px;
+    max-width: 1280px;
     padding: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .img-desc{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     background-color: white;
     border-radius: 5px;
     border: 2px solid rgb(219, 219, 219);
+    transition: all .5s ease-in-out;
 }
+
 
 .img-receita{
     width: max-content;
@@ -32,8 +36,13 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
     border: 10px solid orange;
+    transition: all .5s ease-in-out;
 }
 
+.img-receita img:hover{
+    scale: 1.04;
+    transition: all .5s ease-in-out;
+}
 .sobre-receita{
     display: flex;
     flex-direction: column;
@@ -71,11 +80,145 @@
 }
 
 .info-hidden{
-    display: none;
     color: orange; 
+    transition: all .3s ease-in-out;
 }
 
 .infos:hover .info-hidden{
-    display: block;
+    scale: 1.20;
+    transition: all .3s ease-in-out;
     color: orangered;
+}
+
+.recipes-ads{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ingredientes-container{
+    width: 46%;
+}
+
+.ingredientes{
+    height: 350px;
+}
+
+.titulo-ingredientes, .titulo-preparo{
+        width: 100%;
+        font-size: 150%;
+    /*     font-weight: bolder; */
+    /*     border-bottom: 4px solid #1f1f1f; */
+        border-bottom: 3px solid #1f1f1f;
+        margin-top: 20px;
+        transition: all .3s ease-in-out;
+}
+
+.titulo-ingredientes p, .titulo-preparo p{
+    text-transform: uppercase;
+}
+
+.titulo-ingredientes:hover, .titulo-preparo:hover{
+    border-color: orange;
+    transition: all .3s ease-in-out;
+}
+
+.ingredientes-content, .preparo-content{
+    width: max-content;
+    margin: 20px 0;
+}
+
+.ingredientes-lista{
+    list-style: none;
+}
+
+.ingredientes-itens{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    width: 350px;
+    margin: 15px 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 120%;
+    color: black;
+    transition: all .5s ease-in-out;
+}
+
+.ingredientes-itens p{
+    color: orangered;
+    width: max-content;
+    margin-right: 5px;
+}
+
+.ingredientes-itens:hover{
+    border-bottom: 4px solid rgba(255, 68, 0, 0.63);
+    transition: all .3s ease-in-out;
+    scale: 1.05;
+}
+
+.fa-solid{
+    color: orangered;
+    width: 40px;
+    font-size: 125%;
+}
+
+.ads-container{
+    width: 46%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.ads-content{
+    margin: 20px 0;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .5s ease-in-out;
+    border-right: 5px solid #1f1f1f;
+    border-left: 5px solid #1f1f1f;
+}
+
+.ads-content:hover{
+    background-color: #1f1f1f;
+    transition: all .3s ease-in-out;
+    border-bottom: 10px solid orangered;
+    border-top: 10px solid orangered;
+    border-right: 0;
+    border-left: 0;
+}
+.ads-content:hover .icon-ads .fa-solid{
+    color: orangered;
+    transition: all .5s ease-in-out;
+}
+.ads-content:hover .text-ads{
+    color: orangered;
+    transition: all .5s ease-in-out;
+}
+
+.icon-ads{
+    font-size: 550%;    
+    width: 100px;
+    height: 100px;
+}
+
+.icon-ads .fa-solid{
+    color: black;
+}
+
+.text-ads{
+    width: 100%;
+    height: max-content;
+    font-size: 200%;
+    text-align: center;
+    font-weight: bolder;
 }
